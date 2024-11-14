@@ -1,0 +1,33 @@
+<div class="container my-5">
+    <h2 class="text-center mb-4">Weather App</h2>
+    <form (submit)="getWeather()" class="weather-form">
+      <div class="input-group">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Enter city name"
+          [(ngModel)]="city"
+          name="city"
+          required
+        />
+      </div>
+      <div class="button-wrapper">
+        <button class="btn btn-primary search-btn" type="submit">Search</button>
+      </div>
+    </form>
+    <div *ngIf="weatherData" class="card mx-auto" style="max-width: 400px;">
+      <div class="card-body text-center">
+        <h5 class="card-title">{{ city | titlecase }}</h5>
+        <p class="display-4">{{ weatherData.temperature }}°C</p>
+        <div>
+          <i class="bi bi-wind"></i> 
+          <strong>Wind:</strong> {{ weatherData.windspeed }} m/s
+        </div>
+      </div>
+    </div>
+  
+    <div *ngIf="errorMessage" class="alert alert-danger mt-4" role="alert">
+      {{ errorMessage }}
+    </div>
+  </div>
+  

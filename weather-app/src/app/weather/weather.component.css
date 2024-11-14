@@ -1,0 +1,15 @@
+.weather-form {
+    max-width: 500px; /* Limit max-width to keep the layout centered */
+    margin: 0 auto; /* Center the form */
+    position: relative;
+  }
+  
+  .button-wrapper {
+    text-align: right; /* Right-aligns the button within the div */
+  }
+  
+  .search-btn {
+    margin-top: 8px; /* Creates spacing between input and button */
+    width: auto; /* Allows button to shrink to fit content */
+  }
+  
